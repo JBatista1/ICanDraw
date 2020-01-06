@@ -1,0 +1,6 @@
+framework module Pods_ICanDraw {
+  umbrella header "Pods-ICanDraw-umbrella.h"
+
+  export *
+  module * { export * }
+}

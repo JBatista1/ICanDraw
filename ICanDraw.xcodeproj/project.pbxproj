@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		9A89FEC323C3C13C005CCEB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A89FEC223C3C13C005CCEB7 /* AppDelegate.swift */; };
 		9A89FEC523C3C13C005CCEB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A89FEC423C3C13C005CCEB7 /* SceneDelegate.swift */; };
-		9A89FEC723C3C13C005CCEB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A89FEC623C3C13C005CCEB7 /* ViewController.swift */; };
-		9A89FECA23C3C13C005CCEB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A89FEC823C3C13C005CCEB7 /* Main.storyboard */; };
 		9A89FECC23C3C140005CCEB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A89FECB23C3C140005CCEB7 /* Assets.xcassets */; };
 		9A89FECF23C3C140005CCEB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A89FECD23C3C140005CCEB7 /* LaunchScreen.storyboard */; };
 		9A89FEDA23C3C141005CCEB7 /* ICanDrawTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A89FED923C3C141005CCEB7 /* ICanDrawTests.swift */; };
+		9A89FEE923C3C450005CCEB7 /* DrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A89FEE823C3C450005CCEB7 /* DrawViewController.swift */; };
+		D40412CBC9D894C21C870452 /* Pods_ICanDraw_ICanDrawTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B76BEF7C81A99BB31E4830 /* Pods_ICanDraw_ICanDrawTests.framework */; };
+		F88FDDEF11B46CC03DA55BDB /* Pods_ICanDraw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7187DF4444652EC0BB8AEB03 /* Pods_ICanDraw.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +28,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E8C4CB9231152E84535E1ED /* Pods-ICanDraw-ICanDrawTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ICanDraw-ICanDrawTests.debug.xcconfig"; path = "Target Support Files/Pods-ICanDraw-ICanDrawTests/Pods-ICanDraw-ICanDrawTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4926F9E617FDAC499218011D /* Pods-ICanDraw-ICanDrawTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ICanDraw-ICanDrawTests.release.xcconfig"; path = "Target Support Files/Pods-ICanDraw-ICanDrawTests/Pods-ICanDraw-ICanDrawTests.release.xcconfig"; sourceTree = "<group>"; };
+		7187DF4444652EC0BB8AEB03 /* Pods_ICanDraw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ICanDraw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80B76BEF7C81A99BB31E4830 /* Pods_ICanDraw_ICanDrawTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ICanDraw_ICanDrawTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A89FEBF23C3C13C005CCEB7 /* ICanDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ICanDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A89FEC223C3C13C005CCEB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A89FEC423C3C13C005CCEB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9A89FEC623C3C13C005CCEB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9A89FEC923C3C13C005CCEB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9A89FECB23C3C140005CCEB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A89FECE23C3C140005CCEB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A89FED023C3C140005CCEB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A89FED523C3C141005CCEB7 /* ICanDrawTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ICanDrawTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A89FED923C3C141005CCEB7 /* ICanDrawTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICanDrawTests.swift; sourceTree = "<group>"; };
 		9A89FEDB23C3C141005CCEB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A89FEE823C3C450005CCEB7 /* DrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawViewController.swift; sourceTree = "<group>"; };
+		DAAF3D7D787A9F1E0A08A107 /* Pods-ICanDraw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ICanDraw.release.xcconfig"; path = "Target Support Files/Pods-ICanDraw/Pods-ICanDraw.release.xcconfig"; sourceTree = "<group>"; };
+		ED28C1B9AD60462872FEAB86 /* Pods-ICanDraw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ICanDraw.debug.xcconfig"; path = "Target Support Files/Pods-ICanDraw/Pods-ICanDraw.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F88FDDEF11B46CC03DA55BDB /* Pods_ICanDraw.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +59,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D40412CBC9D894C21C870452 /* Pods_ICanDraw_ICanDrawTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3DA1154D9661262808CF3C53 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ED28C1B9AD60462872FEAB86 /* Pods-ICanDraw.debug.xcconfig */,
+				DAAF3D7D787A9F1E0A08A107 /* Pods-ICanDraw.release.xcconfig */,
+				3E8C4CB9231152E84535E1ED /* Pods-ICanDraw-ICanDrawTests.debug.xcconfig */,
+				4926F9E617FDAC499218011D /* Pods-ICanDraw-ICanDrawTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9A89FEB623C3C13C005CCEB7 = {
 			isa = PBXGroup;
 			children = (
 				9A89FEC123C3C13C005CCEB7 /* ICanDraw */,
 				9A89FED823C3C141005CCEB7 /* ICanDrawTests */,
 				9A89FEC023C3C13C005CCEB7 /* Products */,
+				3DA1154D9661262808CF3C53 /* Pods */,
+				E9DC2D76A51908F366D4A255 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,10 +101,11 @@
 		9A89FEC123C3C13C005CCEB7 /* ICanDraw */ = {
 			isa = PBXGroup;
 			children = (
-				9A89FEC223C3C13C005CCEB7 /* AppDelegate.swift */,
-				9A89FEC423C3C13C005CCEB7 /* SceneDelegate.swift */,
-				9A89FEC623C3C13C005CCEB7 /* ViewController.swift */,
-				9A89FEC823C3C13C005CCEB7 /* Main.storyboard */,
+				9AC36AF723C3E095003A0AC1 /* Configurate Project */,
+				9A89FEE723C3C409005CCEB7 /* Delegates */,
+				9A89FEE623C3C3F4005CCEB7 /* Controller */,
+				9A89FEE523C3C3D7005CCEB7 /* View */,
+				9A89FEE423C3C3CD005CCEB7 /* Model */,
 				9A89FECB23C3C140005CCEB7 /* Assets.xcassets */,
 				9A89FECD23C3C140005CCEB7 /* LaunchScreen.storyboard */,
 				9A89FED023C3C140005CCEB7 /* Info.plist */,
@@ -99,6 +122,53 @@
 			path = ICanDrawTests;
 			sourceTree = "<group>";
 		};
+		9A89FEE423C3C3CD005CCEB7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9A89FEE523C3C3D7005CCEB7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9A89FEE623C3C3F4005CCEB7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9A89FEE823C3C450005CCEB7 /* DrawViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9A89FEE723C3C409005CCEB7 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				9A89FEC223C3C13C005CCEB7 /* AppDelegate.swift */,
+				9A89FEC423C3C13C005CCEB7 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		9AC36AF723C3E095003A0AC1 /* Configurate Project */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Configurate Project";
+			sourceTree = "<group>";
+		};
+		E9DC2D76A51908F366D4A255 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7187DF4444652EC0BB8AEB03 /* Pods_ICanDraw.framework */,
+				80B76BEF7C81A99BB31E4830 /* Pods_ICanDraw_ICanDrawTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +176,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A89FEDE23C3C141005CCEB7 /* Build configuration list for PBXNativeTarget "ICanDraw" */;
 			buildPhases = (
+				316C33DF47C155C7855680F2 /* [CP] Check Pods Manifest.lock */,
 				9A89FEBB23C3C13C005CCEB7 /* Sources */,
 				9A89FEBC23C3C13C005CCEB7 /* Frameworks */,
 				9A89FEBD23C3C13C005CCEB7 /* Resources */,
+				9AC36AF623C3E02E003A0AC1 /* Lint */,
 			);
 			buildRules = (
 			);
@@ -123,9 +195,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A89FEE123C3C141005CCEB7 /* Build configuration list for PBXNativeTarget "ICanDrawTests" */;
 			buildPhases = (
+				79B16EADC6071394865195B1 /* [CP] Check Pods Manifest.lock */,
 				9A89FED123C3C141005CCEB7 /* Sources */,
 				9A89FED223C3C141005CCEB7 /* Frameworks */,
 				9A89FED323C3C141005CCEB7 /* Resources */,
+				C278A6E90BD55F77E7B885EA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -182,7 +256,6 @@
 			files = (
 				9A89FECF23C3C140005CCEB7 /* LaunchScreen.storyboard in Resources */,
 				9A89FECC23C3C140005CCEB7 /* Assets.xcassets in Resources */,
-				9A89FECA23C3C13C005CCEB7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,12 +268,94 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		316C33DF47C155C7855680F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ICanDraw-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79B16EADC6071394865195B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ICanDraw-ICanDrawTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AC36AF623C3E02E003A0AC1 /* Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Lint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		C278A6E90BD55F77E7B885EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ICanDraw-ICanDrawTests/Pods-ICanDraw-ICanDrawTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ICanDraw-ICanDrawTests/Pods-ICanDraw-ICanDrawTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ICanDraw-ICanDrawTests/Pods-ICanDraw-ICanDrawTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9A89FEBB23C3C13C005CCEB7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A89FEC723C3C13C005CCEB7 /* ViewController.swift in Sources */,
+				9A89FEE923C3C450005CCEB7 /* DrawViewController.swift in Sources */,
 				9A89FEC323C3C13C005CCEB7 /* AppDelegate.swift in Sources */,
 				9A89FEC523C3C13C005CCEB7 /* SceneDelegate.swift in Sources */,
 			);
@@ -225,14 +380,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9A89FEC823C3C13C005CCEB7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9A89FEC923C3C13C005CCEB7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9A89FECD23C3C140005CCEB7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -360,6 +507,7 @@
 		};
 		9A89FEDF23C3C141005CCEB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED28C1B9AD60462872FEAB86 /* Pods-ICanDraw.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -378,6 +526,7 @@
 		};
 		9A89FEE023C3C141005CCEB7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAAF3D7D787A9F1E0A08A107 /* Pods-ICanDraw.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -396,6 +545,7 @@
 		};
 		9A89FEE223C3C141005CCEB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E8C4CB9231152E84535E1ED /* Pods-ICanDraw-ICanDrawTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -418,6 +568,7 @@
 		};
 		9A89FEE323C3C141005CCEB7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4926F9E617FDAC499218011D /* Pods-ICanDraw-ICanDrawTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

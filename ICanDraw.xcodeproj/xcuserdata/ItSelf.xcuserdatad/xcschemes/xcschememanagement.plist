@@ -7,7 +7,20 @@
 		<key>ICanDraw.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>6</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>9A89FEBE23C3C13C005CCEB7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9A89FED423C3C141005CCEB7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

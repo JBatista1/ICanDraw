@@ -3,16 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A14579923C40E6C0021906B /* Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A14579823C40E6C0021906B /* Draw.swift */; };
 		9A89FEC323C3C13C005CCEB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A89FEC223C3C13C005CCEB7 /* AppDelegate.swift */; };
 		9A89FEC523C3C13C005CCEB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A89FEC423C3C13C005CCEB7 /* SceneDelegate.swift */; };
 		9A89FECC23C3C140005CCEB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A89FECB23C3C140005CCEB7 /* Assets.xcassets */; };
 		9A89FECF23C3C140005CCEB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A89FECD23C3C140005CCEB7 /* LaunchScreen.storyboard */; };
 		9A89FEDA23C3C141005CCEB7 /* ICanDrawTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A89FED923C3C141005CCEB7 /* ICanDrawTests.swift */; };
-		9A89FEE923C3C450005CCEB7 /* DrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A89FEE823C3C450005CCEB7 /* DrawViewController.swift */; };
+		9A89FEE923C3C450005CCEB7 /* DrawingBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A89FEE823C3C450005CCEB7 /* DrawingBoardViewController.swift */; };
+		9AC36AFB23C3FD9B003A0AC1 /* DrawingBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC36AFA23C3FD9B003A0AC1 /* DrawingBoard.swift */; };
+		9AC36AFE23C3FE0B003A0AC1 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC36AFD23C3FE0B003A0AC1 /* CodeView.swift */; };
 		D40412CBC9D894C21C870452 /* Pods_ICanDraw_ICanDrawTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B76BEF7C81A99BB31E4830 /* Pods_ICanDraw_ICanDrawTests.framework */; };
 		F88FDDEF11B46CC03DA55BDB /* Pods_ICanDraw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7187DF4444652EC0BB8AEB03 /* Pods_ICanDraw.framework */; };
 /* End PBXBuildFile section */
@@ -32,6 +35,7 @@
 		4926F9E617FDAC499218011D /* Pods-ICanDraw-ICanDrawTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ICanDraw-ICanDrawTests.release.xcconfig"; path = "Target Support Files/Pods-ICanDraw-ICanDrawTests/Pods-ICanDraw-ICanDrawTests.release.xcconfig"; sourceTree = "<group>"; };
 		7187DF4444652EC0BB8AEB03 /* Pods_ICanDraw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ICanDraw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B76BEF7C81A99BB31E4830 /* Pods_ICanDraw_ICanDrawTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ICanDraw_ICanDrawTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A14579823C40E6C0021906B /* Draw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Draw.swift; sourceTree = "<group>"; };
 		9A89FEBF23C3C13C005CCEB7 /* ICanDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ICanDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A89FEC223C3C13C005CCEB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A89FEC423C3C13C005CCEB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,7 +45,9 @@
 		9A89FED523C3C141005CCEB7 /* ICanDrawTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ICanDrawTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A89FED923C3C141005CCEB7 /* ICanDrawTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICanDrawTests.swift; sourceTree = "<group>"; };
 		9A89FEDB23C3C141005CCEB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9A89FEE823C3C450005CCEB7 /* DrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawViewController.swift; sourceTree = "<group>"; };
+		9A89FEE823C3C450005CCEB7 /* DrawingBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingBoardViewController.swift; sourceTree = "<group>"; };
+		9AC36AFA23C3FD9B003A0AC1 /* DrawingBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingBoard.swift; sourceTree = "<group>"; };
+		9AC36AFD23C3FE0B003A0AC1 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 		DAAF3D7D787A9F1E0A08A107 /* Pods-ICanDraw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ICanDraw.release.xcconfig"; path = "Target Support Files/Pods-ICanDraw/Pods-ICanDraw.release.xcconfig"; sourceTree = "<group>"; };
 		ED28C1B9AD60462872FEAB86 /* Pods-ICanDraw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ICanDraw.debug.xcconfig"; path = "Target Support Files/Pods-ICanDraw/Pods-ICanDraw.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,7 +80,6 @@
 				3E8C4CB9231152E84535E1ED /* Pods-ICanDraw-ICanDrawTests.debug.xcconfig */,
 				4926F9E617FDAC499218011D /* Pods-ICanDraw-ICanDrawTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -101,6 +106,7 @@
 		9A89FEC123C3C13C005CCEB7 /* ICanDraw */ = {
 			isa = PBXGroup;
 			children = (
+				9AC36AFC23C3FDB7003A0AC1 /* Protocol */,
 				9AC36AF723C3E095003A0AC1 /* Configurate Project */,
 				9A89FEE723C3C409005CCEB7 /* Delegates */,
 				9A89FEE623C3C3F4005CCEB7 /* Controller */,
@@ -125,6 +131,7 @@
 		9A89FEE423C3C3CD005CCEB7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9A14579823C40E6C0021906B /* Draw.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -132,6 +139,7 @@
 		9A89FEE523C3C3D7005CCEB7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9AC36AFA23C3FD9B003A0AC1 /* DrawingBoard.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -139,7 +147,7 @@
 		9A89FEE623C3C3F4005CCEB7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9A89FEE823C3C450005CCEB7 /* DrawViewController.swift */,
+				9A89FEE823C3C450005CCEB7 /* DrawingBoardViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -158,6 +166,14 @@
 			children = (
 			);
 			path = "Configurate Project";
+			sourceTree = "<group>";
+		};
+		9AC36AFC23C3FDB7003A0AC1 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				9AC36AFD23C3FE0B003A0AC1 /* CodeView.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		E9DC2D76A51908F366D4A255 /* Frameworks */ = {
@@ -355,9 +371,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A89FEE923C3C450005CCEB7 /* DrawViewController.swift in Sources */,
+				9A89FEE923C3C450005CCEB7 /* DrawingBoardViewController.swift in Sources */,
 				9A89FEC323C3C13C005CCEB7 /* AppDelegate.swift in Sources */,
+				9A14579923C40E6C0021906B /* Draw.swift in Sources */,
 				9A89FEC523C3C13C005CCEB7 /* SceneDelegate.swift in Sources */,
+				9AC36AFE23C3FE0B003A0AC1 /* CodeView.swift in Sources */,
+				9AC36AFB23C3FD9B003A0AC1 /* DrawingBoard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

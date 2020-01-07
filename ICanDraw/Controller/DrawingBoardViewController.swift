@@ -11,14 +11,14 @@ import UIKit
 class DrawingBoardViewController: UIViewController {
     var lastPoint = CGPoint.zero
     var swiped = false
-    var drawingBoard = DrawingBoard(frame: .zero)
+    var customView = DrawingBoard(frame: .zero)
     var draw: Draw!
     override func viewDidLoad() {
         super.viewDidLoad()
-        draw = Draw(imageViewForDraw: drawingBoard.imageForDraw, brushWidth: 5.0, colorBrush: .black, opacity: 1.0)
+        draw = Draw(imageViewForDraw: customView.imageForDraw, brushWidth: 5.0, colorBrush: .black, opacity: 1.0)
     }
     override func loadView() {
-        view = drawingBoard
+        view = customView
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -26,14 +26,14 @@ class DrawingBoardViewController: UIViewController {
             return
         }
         swiped = false
-        lastPoint = touch.location(in: drawingBoard.imageDraw)
+        lastPoint = touch.location(in: customView.imageDraw)
     }
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else {
             return
         }
         swiped = true
-        let currentPoit = touch.location(in: drawingBoard.imageDraw)
+        let currentPoit = touch.location(in: customView.imageDraw)
         draw.line(from: lastPoint, to: currentPoit)
         lastPoint = currentPoit
     }
@@ -42,11 +42,11 @@ class DrawingBoardViewController: UIViewController {
         if !swiped {
             draw.line(from: lastPoint, to: lastPoint)
         }
-        UIGraphicsBeginImageContext(drawingBoard.imageDraw.frame.size)
-        drawingBoard.imageDraw.image?.draw(in: drawingBoard.imageDraw.bounds, blendMode: .normal, alpha: 1.0)
-        drawingBoard.imageForDraw.image?.draw(in: drawingBoard.imageDraw.bounds, blendMode: .normal, alpha: 1.0)
-        drawingBoard.imageDraw.image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsBeginImageContext(customView.imageDraw.frame.size)
+        customView.imageDraw.image?.draw(in: customView.imageDraw.bounds, blendMode: .normal, alpha: 1.0)
+        customView.imageForDraw.image?.draw(in: customView.imageDraw.bounds, blendMode: .normal, alpha: 1.0)
+        customView.imageDraw.image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        drawingBoard.imageForDraw.image = nil
+        customView.imageForDraw.image = nil
     }
 }

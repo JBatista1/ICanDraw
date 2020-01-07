@@ -18,6 +18,7 @@ class DrawingBoard: UIView {
     }()
     let imageDraw: UIImageView = {
         let image = UIImageView()
+        image.contentMode = .scaleToFill
         image.translatesAutoresizingMaskIntoConstraints = false
        
         return image

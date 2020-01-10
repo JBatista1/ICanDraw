@@ -11,6 +11,8 @@
 		9A09A52823C4DC11007028B6 /* AdjustSensitivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A09A52723C4DC11007028B6 /* AdjustSensitivity.swift */; };
 		9A09A52A23C4DE0C007028B6 /* AdjustSensitivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A09A52923C4DE0C007028B6 /* AdjustSensitivityViewController.swift */; };
 		9A14579923C40E6C0021906B /* Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A14579823C40E6C0021906B /* Draw.swift */; };
+		9A4E071223C8ECA8006E4B62 /* CursorPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E071123C8ECA8006E4B62 /* CursorPosition.swift */; };
+		9A55927423C51C84006C30F7 /* MathLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A55927323C51C84006C30F7 /* MathLib.swift */; };
 		9A89FEC323C3C13C005CCEB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A89FEC223C3C13C005CCEB7 /* AppDelegate.swift */; };
 		9A89FEC523C3C13C005CCEB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A89FEC423C3C13C005CCEB7 /* SceneDelegate.swift */; };
 		9A89FECC23C3C140005CCEB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A89FECB23C3C140005CCEB7 /* Assets.xcassets */; };
@@ -19,6 +21,8 @@
 		9A89FEE923C3C450005CCEB7 /* DrawingBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A89FEE823C3C450005CCEB7 /* DrawingBoardViewController.swift */; };
 		9AC36AFB23C3FD9B003A0AC1 /* DrawingBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC36AFA23C3FD9B003A0AC1 /* DrawingBoard.swift */; };
 		9AC36AFE23C3FE0B003A0AC1 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC36AFD23C3FE0B003A0AC1 /* CodeView.swift */; };
+		9AFB52EE23C8FF5D00990C1F /* StateCursor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFB52ED23C8FF5D00990C1F /* StateCursor.swift */; };
+		9AFB52F123C90A2E00990C1F /* Sequence+Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFB52F023C90A2E00990C1F /* Sequence+Sum.swift */; };
 		D40412CBC9D894C21C870452 /* Pods_ICanDraw_ICanDrawTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B76BEF7C81A99BB31E4830 /* Pods_ICanDraw_ICanDrawTests.framework */; };
 		F88FDDEF11B46CC03DA55BDB /* Pods_ICanDraw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7187DF4444652EC0BB8AEB03 /* Pods_ICanDraw.framework */; };
 /* End PBXBuildFile section */
@@ -42,6 +46,8 @@
 		9A09A52723C4DC11007028B6 /* AdjustSensitivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustSensitivity.swift; sourceTree = "<group>"; };
 		9A09A52923C4DE0C007028B6 /* AdjustSensitivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustSensitivityViewController.swift; sourceTree = "<group>"; };
 		9A14579823C40E6C0021906B /* Draw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Draw.swift; sourceTree = "<group>"; };
+		9A4E071123C8ECA8006E4B62 /* CursorPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorPosition.swift; sourceTree = "<group>"; };
+		9A55927323C51C84006C30F7 /* MathLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathLib.swift; sourceTree = "<group>"; };
 		9A89FEBF23C3C13C005CCEB7 /* ICanDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ICanDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A89FEC223C3C13C005CCEB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A89FEC423C3C13C005CCEB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +60,8 @@
 		9A89FEE823C3C450005CCEB7 /* DrawingBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingBoardViewController.swift; sourceTree = "<group>"; };
 		9AC36AFA23C3FD9B003A0AC1 /* DrawingBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingBoard.swift; sourceTree = "<group>"; };
 		9AC36AFD23C3FE0B003A0AC1 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
+		9AFB52ED23C8FF5D00990C1F /* StateCursor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateCursor.swift; sourceTree = "<group>"; };
+		9AFB52F023C90A2E00990C1F /* Sequence+Sum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Sum.swift"; sourceTree = "<group>"; };
 		DAAF3D7D787A9F1E0A08A107 /* Pods-ICanDraw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ICanDraw.release.xcconfig"; path = "Target Support Files/Pods-ICanDraw/Pods-ICanDraw.release.xcconfig"; sourceTree = "<group>"; };
 		ED28C1B9AD60462872FEAB86 /* Pods-ICanDraw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ICanDraw.debug.xcconfig"; path = "Target Support Files/Pods-ICanDraw/Pods-ICanDraw.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,12 +120,13 @@
 		9A89FEC123C3C13C005CCEB7 /* ICanDraw */ = {
 			isa = PBXGroup;
 			children = (
+				9AFB52EF23C90A2000990C1F /* Extension */,
+				9AFB52EC23C8FF4A00990C1F /* Enum */,
 				9AC36AFC23C3FDB7003A0AC1 /* Protocol */,
-				9AC36AF723C3E095003A0AC1 /* Configurate Project */,
 				9A89FEE723C3C409005CCEB7 /* Delegates */,
-				9A89FEE623C3C3F4005CCEB7 /* Controller */,
-				9A89FEE523C3C3D7005CCEB7 /* View */,
 				9A89FEE423C3C3CD005CCEB7 /* Model */,
+				9A89FEE523C3C3D7005CCEB7 /* View */,
+				9A89FEE623C3C3F4005CCEB7 /* Controller */,
 				9A89FECB23C3C140005CCEB7 /* Assets.xcassets */,
 				9A89FECD23C3C140005CCEB7 /* LaunchScreen.storyboard */,
 				9A89FED023C3C140005CCEB7 /* Info.plist */,
@@ -139,6 +148,8 @@
 			children = (
 				9A14579823C40E6C0021906B /* Draw.swift */,
 				9A09A52523C4D84A007028B6 /* FaceCapture.swift */,
+				9A55927323C51C84006C30F7 /* MathLib.swift */,
+				9A4E071123C8ECA8006E4B62 /* CursorPosition.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -170,19 +181,28 @@
 			path = Delegates;
 			sourceTree = "<group>";
 		};
-		9AC36AF723C3E095003A0AC1 /* Configurate Project */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Configurate Project";
-			sourceTree = "<group>";
-		};
 		9AC36AFC23C3FDB7003A0AC1 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
 				9AC36AFD23C3FE0B003A0AC1 /* CodeView.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		9AFB52EC23C8FF4A00990C1F /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				9AFB52ED23C8FF5D00990C1F /* StateCursor.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		9AFB52EF23C90A2000990C1F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9AFB52F023C90A2E00990C1F /* Sequence+Sum.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		E9DC2D76A51908F366D4A255 /* Frameworks */ = {
@@ -382,11 +402,15 @@
 			files = (
 				9A09A52A23C4DE0C007028B6 /* AdjustSensitivityViewController.swift in Sources */,
 				9A09A52823C4DC11007028B6 /* AdjustSensitivity.swift in Sources */,
+				9A4E071223C8ECA8006E4B62 /* CursorPosition.swift in Sources */,
 				9A89FEE923C3C450005CCEB7 /* DrawingBoardViewController.swift in Sources */,
 				9A89FEC323C3C13C005CCEB7 /* AppDelegate.swift in Sources */,
 				9A09A52623C4D84A007028B6 /* FaceCapture.swift in Sources */,
 				9A14579923C40E6C0021906B /* Draw.swift in Sources */,
+				9AFB52F123C90A2E00990C1F /* Sequence+Sum.swift in Sources */,
+				9AFB52EE23C8FF5D00990C1F /* StateCursor.swift in Sources */,
 				9A89FEC523C3C13C005CCEB7 /* SceneDelegate.swift in Sources */,
+				9A55927423C51C84006C30F7 /* MathLib.swift in Sources */,
 				9AC36AFE23C3FE0B003A0AC1 /* CodeView.swift in Sources */,
 				9AC36AFB23C3FD9B003A0AC1 /* DrawingBoard.swift in Sources */,
 			);

@@ -18,49 +18,55 @@ class FaceCapture: NSObject {
     //Cria uma threde separada para se trabalhar em paralelo e não precisar bloquear o Dispositivo
     
     let dataOutputQueue = DispatchQueue(
-       label: "video data queue",
-       qos: .userInitiated,
-       attributes: [],
-       autoreleaseFrequency: .workItem)
+        label: "video data queue",
+        qos: .userInitiated,
+        attributes: [],
+        autoreleaseFrequency: .workItem)
     
     init(view: UIView) {
         self.view = view
+        
     }
+    func getView() -> AVCaptureVideoPreviewLayer {
+        return previewLayer
+    }
+    
     func configureCaptureSession() {
-      // Define the capture device we want to use
-      guard let camera = AVCaptureDevice.default(.builtInWideAngleCamera,
-                                                 for: .video,
-                                                 position: .front) else {
-        fatalError("No front video camera available")
-      }
-      
-      // Connect the camera to the capture session input
-      do {
-        let cameraInput = try AVCaptureDeviceInput(device: camera)
-        session.addInput(cameraInput)
-      } catch {
-        fatalError(error.localizedDescription)
-      }
-      
-      // Create the video data output
-      let videoOutput = AVCaptureVideoDataOutput()
-      videoOutput.setSampleBufferDelegate(self, queue: dataOutputQueue)
-      videoOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey as String: kCVPixelFormatType_32BGRA]
-      
-      // Add the video output to the capture session
-      session.addOutput(videoOutput)
-      
-      let videoConnection = videoOutput.connection(with: .video)
-      videoConnection?.videoOrientation = .portrait
-      
-      // Configure the preview layer
-      previewLayer = AVCaptureVideoPreviewLayer(session: session)
-      previewLayer.videoGravity = .resizeAspectFill
-      previewLayer.frame = view.bounds
-      view.layer.insertSublayer(previewLayer, at: 0)
+        // Define the capture device we want to use
+        guard let camera = AVCaptureDevice.default(.builtInWideAngleCamera,
+                                                   for: .video,
+                                                   position: .front) else {
+                                                    fatalError("No front video camera available")
+        }
+        
+        // Connect the camera to the capture session input
+        do {
+            let cameraInput = try AVCaptureDeviceInput(device: camera)
+            session.addInput(cameraInput)
+        } catch {
+            fatalError(error.localizedDescription)
+        }
+        
+        // Create the video data output
+        let videoOutput = AVCaptureVideoDataOutput()
+        videoOutput.setSampleBufferDelegate(self, queue: dataOutputQueue)
+        videoOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey as String: kCVPixelFormatType_32BGRA]
+        
+        // Add the video output to the capture session
+        session.addOutput(videoOutput)
+        
+        let videoConnection = videoOutput.connection(with: .video)
+        videoConnection?.videoOrientation = .portrait
+        
+        // Configure the preview layer
+        previewLayer = AVCaptureVideoPreviewLayer(session: session)
+        previewLayer.videoGravity = .resizeAspectFill
+        previewLayer.frame = view.bounds
+        view.layer.insertSublayer(previewLayer, at: 0)
+        session.startRunning()
     }
 }
 extension FaceCapture: AVCaptureVideoDataOutputSampleBufferDelegate {
-  func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-  }
+    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+    }
 }

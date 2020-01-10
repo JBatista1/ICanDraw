@@ -9,8 +9,9 @@
 import UIKit
 
 class AdjustSensitivity: UIView {
-    private let faceView: UIView = {
-        let view = UIView()
+     let faceView: UIImageView = {
+        let view = UIImageView()
+        view.image =  UIImage(named: "lapis")
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -18,6 +19,7 @@ class AdjustSensitivity: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupInitial()
+        backgroundColor = .white
     }
     
     required init?(coder: NSCoder) {
@@ -32,10 +34,10 @@ extension AdjustSensitivity: CodeView {
     
     func setupConstrants() {
         NSLayoutConstraint.activate([
-            faceView.topAnchor.constraint(equalTo: topAnchor, constant: 0),
-            faceView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0),
-            faceView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
-            faceView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0)
+            faceView.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 0),
+            faceView.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 0),
+            faceView.heightAnchor.constraint(equalToConstant: 50),
+            faceView.widthAnchor.constraint(equalToConstant: 50)
         ])
     }
     

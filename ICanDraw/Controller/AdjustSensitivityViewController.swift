@@ -7,26 +7,105 @@
 //
 
 import UIKit
+import AVFoundation
+import Vision
 
 class AdjustSensitivityViewController: UIViewController {
+    let session = AVCaptureSession()
     let customView = AdjustSensitivity(frame: .zero)
+    var faceCapture: FaceCapture!
+    var sequenceHandler = VNSequenceRequestHandler()
+    let math = MathLib()
+    let sensibility: CGFloat = 40.0
+    var orientationVideo = CGImagePropertyOrientation.down
+    var count = 0
+    
+    var cursor: CursorPosition!
+    
+    let dataOutputQueue = DispatchQueue(
+        label: "video data queue",
+        qos: .userInitiated,
+        attributes: [],
+        autoreleaseFrequency: .workItem)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        configureCaptureSession()
+        session.startRunning()
+        let screen = UIScreen.main.bounds
+        let positionInitial = CGPoint(x: screen.width / 2, y: screen.height / 2)
+        cursor = CursorPosition(sensibinity: 10.0, decimalPlace: 100, initialPosition: positionInitial)
+        
     }
     override func loadView() {
         view = customView
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //Verificar orientacao do dispositivo
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        let orientation = UIDevice.current.orientation
+        if orientation == .landscapeLeft {
+            orientationVideo = .up
+        } else {
+            orientationVideo = .down
+        }
     }
-    */
-
+    
+    func configureCaptureSession() {
+        guard let camera = AVCaptureDevice.default(.builtInWideAngleCamera,
+                                                   for: .video,
+                                                   position: .front) else {
+                                                    fatalError("No front video camera available")
+        }
+        do {
+            let cameraInput = try AVCaptureDeviceInput(device: camera)
+            session.addInput(cameraInput)
+        } catch {
+            fatalError(error.localizedDescription)
+        }
+        
+        let videoOutput = AVCaptureVideoDataOutput()
+        let videoInut = AVCaptureVideoOrientation.landscapeLeft
+        videoOutput.connection(with: .video)?.videoOrientation = videoInut
+        
+        videoOutput.setSampleBufferDelegate(self, queue: dataOutputQueue)
+        
+        session.addOutput(videoOutput)
+    }
+    
 }
+
+extension AdjustSensitivityViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
+    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+        guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
+            return
+        }
+        let detectFaceRequest = VNDetectFaceLandmarksRequest(completionHandler: detectedFace)
+        
+        // 3
+        do {
+            try sequenceHandler.perform(
+                [detectFaceRequest],
+                on: imageBuffer,
+                orientation: orientationVideo)
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func detectedFace(request: VNRequest, error: Error?) {
+        guard let results = request.results as? [VNFaceObservation] else { return}
+        
+        if let landmark = results.first?.landmarks?.nose {
+            
+            guard let point = landmark.normalizedPoints.first else { return }
+            DispatchQueue.main.async {
+                let newPosition = self.cursor.moveTo(usingPoint: point)
+                UIView.animate(withDuration: 2, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.2, options: .transitionCrossDissolve, animations: {
+                    self.customView.faceView.center = newPosition
+                }, completion: nil)
+            }
+        }
+    }
+}
+//0.0075491033

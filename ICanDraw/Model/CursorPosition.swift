@@ -13,8 +13,8 @@ class CursorPosition {
     let math = MathLib()
     let sensibility: CGFloat!
     let decimalPlace: CGFloat!
-    let marginMovimentX: Float = 0.01
-    let marginMovimentY: Float = 0.009
+    let marginMovimentX: Float = 0.015
+    let marginMovimentY: Float = 0.015
     var lastPoint: CGPoint!
     var lastPointFace = CGPoint(x: 0.0, y: 0.0)
     var count = 0
@@ -71,6 +71,7 @@ class CursorPosition {
 //        mediaFacePosition(value: valueFloat)
         return valueFloat
     }
+    //Calcula media parado
     func mediaFacePosition(value: Float) {
         count += 1
         mediaX.append(value)
@@ -89,7 +90,7 @@ class CursorPosition {
             exit(0)
         }
     }
-    func verifyLimits(position: CGPoint) -> CGPoint{
+    func verifyLimits(position: CGPoint) -> CGPoint {
         var positionNew = position
         let height = UIScreen.main.bounds.height
         let width = UIScreen.main.bounds.width

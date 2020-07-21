@@ -16,7 +16,7 @@ class AdjustSensitivityViewController: UIViewController {
     var faceCapture: FaceCapture!
     var sequenceHandler = VNSequenceRequestHandler()
     let math = MathLib()
-    let sensibility: CGFloat = 40.0
+    let sensibility: CGFloat = 20.0
     var orientationVideo = CGImagePropertyOrientation.down
     var count = 0
     
@@ -24,13 +24,14 @@ class AdjustSensitivityViewController: UIViewController {
     
     let dataOutputQueue = DispatchQueue(
         label: "video data queue",
-        qos: .userInitiated,
+        qos: .userInteractive,
         attributes: [],
         autoreleaseFrequency: .workItem)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCaptureSession()
+        
         session.startRunning()
         let screen = UIScreen.main.bounds
         let positionInitial = CGPoint(x: screen.width / 2, y: screen.height / 2)
@@ -57,6 +58,7 @@ class AdjustSensitivityViewController: UIViewController {
                                                    position: .front) else {
                                                     fatalError("No front video camera available")
         }
+       
         do {
             let cameraInput = try AVCaptureDeviceInput(device: camera)
             session.addInput(cameraInput)
@@ -67,10 +69,11 @@ class AdjustSensitivityViewController: UIViewController {
         let videoOutput = AVCaptureVideoDataOutput()
         let videoInut = AVCaptureVideoOrientation.landscapeLeft
         videoOutput.connection(with: .video)?.videoOrientation = videoInut
-        
+        videoOutput.connection(with: .video)?.preferredVideoStabilizationMode = AVCaptureVideoStabilizationMode.auto
+       
         videoOutput.setSampleBufferDelegate(self, queue: dataOutputQueue)
-        
         session.addOutput(videoOutput)
+        
     }
     
 }
@@ -81,8 +84,7 @@ extension AdjustSensitivityViewController: AVCaptureVideoDataOutputSampleBufferD
             return
         }
         let detectFaceRequest = VNDetectFaceLandmarksRequest(completionHandler: detectedFace)
-        
-        // 3
+
         do {
             try sequenceHandler.perform(
                 [detectFaceRequest],
@@ -101,7 +103,7 @@ extension AdjustSensitivityViewController: AVCaptureVideoDataOutputSampleBufferD
             guard let point = landmark.normalizedPoints.first else { return }
             DispatchQueue.main.async {
                 let newPosition = self.cursor.moveTo(usingPoint: point)
-                UIView.animate(withDuration: 2, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.2, options: .transitionCrossDissolve, animations: {
+                UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.1, options: .transitionCrossDissolve, animations: {
                     self.customView.faceView.center = newPosition
                 }, completion: nil)
             }

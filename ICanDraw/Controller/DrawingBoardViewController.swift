@@ -28,6 +28,7 @@ class DrawingBoardViewController: UIViewController {
         swiped = false
         lastPoint = touch.location(in: customView.imageDraw)
     }
+    
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else {
             return

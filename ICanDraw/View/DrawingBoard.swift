@@ -20,7 +20,6 @@ class DrawingBoard: UIView {
         let image = UIImageView()
         image.contentMode = .scaleToFill
         image.translatesAutoresizingMaskIntoConstraints = false
-       
         return image
     }()
     override init(frame: CGRect) {

@@ -110,4 +110,4 @@ extension AdjustSensitivityViewController: AVCaptureVideoDataOutputSampleBufferD
         }
     }
 }
-//0.0075491033
+
